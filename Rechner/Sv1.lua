@@ -1,32 +1,23 @@
-function plus(z1, z2)
-	print(z1 + z2)
+function rechner(art, z1, z2)
+	if art == p then
+		return z1 + z2
+	elseif art == m then
+		return z1 - z2
+	elseif art == g then
+		return z1 / z2
+	else
+		return z1 * z2
+	end
 end
 
-function minus(z1, z2)
-	print(z1 - z2)
-end
-
-function geteilt(z1, z2)
-	print(z1 / z2)
-end
-
-function mal(z1, z2)
-	print(z1 * z2)
-end
-
-print("Wollen sie [p]lus, [m]inus, [g]eteilt oder [ma]l rechnen?")
-eingabe = io.read()
-print ("geben sie die erste und die zweite Zahl nacheinander ein")
-zahl1 = io.read()
-zahl2 = io.read()
-if eingabe == "p" then
-	print(plus(zahl1, zahl2))
-elseif eingabe == "m" then
-	print(minus(zahl1, zahl2))
-elseif eingabe == "g" then
-	print(geteilt(zahl1, zahl2))
-elseif eingabe == "ma" then
-	print(mal(zahl1, zahl2))
-else
-	print("Falsche eingabe Programm explodiert in BOOOM!")
+while true do
+	while eingabe ~= "p" and eingabe ~= "g" and eingabe ~= "g" and eingabe ~= "ma" do
+		print("Wollen sie [p]lus, [m]inus, [g]eteilt oder [ma]l rechnen?")
+		eingabe = io.read("*line")
+		if eingabe == "exit" then return end
+	end
+	print ("geben sie die erste und die zweite Zahl nacheinander ein")
+	zahl1 = io.read("*number")
+	zahl2 = io.read("*number")
+	print(rechner(eingabe, zahl1, zahl2))
 end
