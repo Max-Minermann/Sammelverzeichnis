@@ -8,22 +8,22 @@ function rechnung (c)
   elseif c == 4 then
     return a,":",b,"=",a/b 
   elseif c < 1 then
-       c = 1
+      c = 1
     print"Falsche eingabe! Bitte wähle zwischen 1-4:"
       c = io.read("*n")
 print(rechnung(c))
   elseif c > 4 then
     c = 1
-    print"Falsche eingabe! Bitte wähle zwischen 1-4:"
-      c = io.read("*n")
-print(rechnung(c))
+  print"Falsche eingabe! Bitte wähle zwischen 1-4:"
+    c = io.read("*n")
+  print(rechnung(c))
   end
 end
   
 print"Rechner"
 print"Zahl eingeben:"
   a = io.read("*n")
-  print"Welche Rechenart?"
+print"Welche Rechenart?"
 print"1 - Plus"
 print"2 - Minus"
 print"3 - Mal"
