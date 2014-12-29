@@ -1,6 +1,22 @@
+function rechner ()
+    print"Rechner"
+    print"Zahl eingeben:"
+        a = io.read("*n")
+    print"Welche Rechenart?"
+    print"1 - Plus"
+    print"2 - Minus"
+    print"3 - Mal"
+    print"4 - Geteilt"
+        c = io.read("*n")
+    print"Weitere Zahl eingeben:"
+        b = io.read("*n")
+    print(rechnung(c))
+end
+
 function rechnung (c)
     if c == 1 then
         return a,"+",b,"=",a+b 
+      -- restart()                <----das will ich machen
     elseif c == 2 then
         return a,"-",b,"=",a-b 
     elseif c == 3 then
@@ -19,16 +35,9 @@ function rechnung (c)
         print(rechnung(c))
     end
 end
-  
-print"Rechner"
-print"Zahl eingeben:"
-    a = io.read("*n")
-print"Welche Rechenart?"
-print"1 - Plus"
-print"2 - Minus"
-print"3 - Mal"
-print"4 - Geteilt"
-    c = io.read("*n")
-print"Weitere Zahl eingeben:"
-    b = io.read("*n")
-print(rechnung(c))
+
+function restart()
+      rechner()
+end
+
+rechner() 
