@@ -1,5 +1,4 @@
 function rechner ()
-    print"Rechner"
     print"Zahl eingeben:"
         a = io.read("*n")
     print"Welche Rechenart?"
@@ -8,7 +7,10 @@ function rechner ()
     print"Weitere Zahl eingeben:"
         b = io.read("*n")
     print(rechnung(c))
-    rechner()
+    print"Nocheinmal rechnen?"
+    print"[1]Ja, [2]Nein"
+        d = io.read("*n")
+    print(beenden(d))    
 end
 
 function rechnung (c)
@@ -33,4 +35,13 @@ function rechnung (c)
     end
 end
 
+function beenden (d)
+    if d == 1 then
+        rechner()
+    elseif d == 2 then
+        os.exit()
+    end
+end
+
+print"Rechner"
 rechner()   
