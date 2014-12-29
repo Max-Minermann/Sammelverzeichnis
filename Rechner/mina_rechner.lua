@@ -9,7 +9,6 @@ function rechnung (c)
     return a,":",b,"=",a/b 
   elseif c < 1 then
        c = 1
-       wait = 1
     print"Falsche eingabe! Bitte wähle zwischen 1-4:"
       c = io.read("*n")
 print(rechnung(c))
