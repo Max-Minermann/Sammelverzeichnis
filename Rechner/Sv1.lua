@@ -13,12 +13,12 @@ end
 while true do
 	while eingabe ~= "p" and eingabe ~= "m" and eingabe ~= "g" and eingabe ~= "ma" do
 		print("Wollen sie [p]lus, [m]inus, [g]eteilt oder [ma]l rechnen?")
-		eingabe = io.read("*line")
+		eingabe = io.read()
 		if eingabe == "exit" then return end
 	end
 	print ("geben sie die erste und die zweite Zahl nacheinander ein")
 	zahl1 = io.read("*number")
 	zahl2 = io.read("*number")
 	print(rechner(eingabe, zahl1, zahl2))
-	eingabe = "nichts"
+	eingabe = io.read()
 end
