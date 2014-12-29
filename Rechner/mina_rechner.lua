@@ -1,12 +1,22 @@
-function rechnung (rechnen)
-  if rechnen == 1 then
+function rechnung (c)
+  if c == 1 then
    return a + b
-  elseif rechnen == 2 then
+  elseif c == 2 then
     return a - b
-  elseif rechnen == 3 then
+  elseif c == 3 then
     return a * b
-  elseif rechnen == 4 then
+  elseif c == 4 then
     return a / b
+  elseif c < 1 then
+       c = 1
+    print"Falsche eingabe! Bitte wähle zwischen 1-4:"
+      c = io.read("*n")
+print(rechnung(c))
+  elseif c > 4 then
+    c = 1
+    print"Falsche eingabe! Bitte wähle zwischen 1-4:"
+      c = io.read("*n")
+print(rechnung(c))
   end
 end
   
