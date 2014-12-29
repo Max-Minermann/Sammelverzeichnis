@@ -17,8 +17,8 @@ while true do
 		if eingabe == "exit" then return end
 	end
 	print ("geben sie die erste und die zweite Zahl nacheinander ein")
-	zahl1 = io.read("*number")
-	zahl2 = io.read("*number")
+	zahl1 = io.read()
+	zahl2 = io.read()
 	print(rechner(eingabe, zahl1, zahl2))
-	eingabe = io.read()
+	eingabe = "nichts"
 end
