@@ -20,5 +20,5 @@ while true do
 	zahl1 = io.read()
 	zahl2 = io.read()
 	print(rechner(eingabe, zahl1, zahl2))
-	eingabe = "nichts"
+	eingabe = nil
 end
