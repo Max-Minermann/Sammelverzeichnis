@@ -1,0 +1,12 @@
+#!/usr/bin/python3.4
+
+meingabe = "leer"
+while(meingabe != "exit"):
+	meingabe = input("Notiz [a]nlegen, Notizen [l]isten oder exit zum beenden: ")
+	if(meingabe == "a"):
+		inotiz = input("Notiz: ")
+		nnotiz = input("Notizname: ")
+		dnotiz = open(nnotiz,"w")
+		dnotiz.write(inotiz)
+	elif(meingabe == "l"):
+		break
