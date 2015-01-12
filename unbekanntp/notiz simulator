@@ -1,12 +1,17 @@
 #!/usr/bin/python3.4
 
+import os
 meingabe = "leer"
 while(meingabe != "exit"):
 	meingabe = input("Notiz [a]nlegen, Notizen [l]isten oder exit zum beenden: ")
 	if(meingabe == "a"):
-		inotiz = input("Notiz: ")
-		nnotiz = input("Notizname: ")
-		dnotiz = open(nnotiz,"w")
-		dnotiz.write(inotiz)
+		nnotiz = input("Notizname: ")		
+		nnotiz = "notiz_" + nnotiz
+		if(os.path.exists(nnotiz)):
+			print("Notiz existiert bereits!")
+		else:			
+			inotiz = input("Notiz: ")
+			dnotiz = open(nnotiz,"w")
+			dnotiz.write(inotiz)
 	elif(meingabe == "l"):
 		break
