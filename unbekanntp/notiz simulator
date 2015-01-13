@@ -1,6 +1,7 @@
 #!/usr/bin/python3.4
 
 import os
+
 meingabe = "leer"
 while(meingabe != "exit"):
 	meingabe = input("Notiz [a]nlegen, Notizen [l]isten oder exit zum beenden: ")
@@ -8,10 +9,22 @@ while(meingabe != "exit"):
 		nnotiz = input("Notizname: ")		
 		nnotiz = "notiz_" + nnotiz
 		if(os.path.exists(nnotiz)):
-			print("Notiz existiert bereits!")
+			print("Notiz existiert bereits oder der Name wird schon verwendet!")
 		else:			
 			inotiz = input("Notiz: ")
 			dnotiz = open(nnotiz,"w")
 			dnotiz.write(inotiz)
+			dnotiz.close()
+			f = open("_notiz","a")
+			f.write(nnotiz)
+			f.write("\n")
+			f.close()
 	elif(meingabe == "l"):
-		break
+		fliste = open("_notiz","r")
+		nliste = fliste.readlines()
+		lnumber = len(nliste)
+		num = 0
+		while(num != lnumber):
+			print(nliste[num], end="")
+			num = num + 1
+		print()
