@@ -1,3 +1,5 @@
+#!/usr/bin/python3.4
+
 a = float(input("Gib die ERSTE Zahl ein: "))
 b = float(input("Gib die ZWEITE Zahl ein: "))
 c = int(input("[1]Plus, [2]Minus, [3]Mal, [4]Geteilt: "))
