@@ -1,0 +1,11 @@
+a = float(input("Gib die ERSTE Zahl ein: "))
+b = float(input("Gib die ZWEITE Zahl ein: "))
+c = int(input("[1]Plus, [2]Minus, [3]Mal, [4]Geteilt: "))
+if c == 1:
+	print(a+b)
+elif c == 2:
+	print(a-b)
+elif c == 3:
+	print(a*b)
+elif c == 4:
+	print(a/b)
