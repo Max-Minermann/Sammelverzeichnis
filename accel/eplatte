@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$1" = "mount" ]; then
+	xterm -e sudo mount /dev/mapper/eplatte /run/media
+elif [ "$1" = "umount" ]; then
+	xterm -e sudo umount /run/media
+fi
