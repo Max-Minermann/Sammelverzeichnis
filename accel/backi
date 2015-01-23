@@ -2,4 +2,6 @@
 
 mount /dev/mapper/eplatte /run/media
 
-tar -zcpf /run/media/SecBackup/$(date "+%Y.%m.%d-%H:%M:%S").tar --directory=etc/
+tar -zcpf backi --directory=/etc/
+
+mv /etc/backi /run/media/SecBackups/$(date "+%Y.%m.%d-%H:%M:%S").tar.gz
