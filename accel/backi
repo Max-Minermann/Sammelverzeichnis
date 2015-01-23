@@ -2,4 +2,4 @@
 
 mount /dev/mapper/eplatte /run/media
 
-tar -zcpf /run/backup-etc-$(date "+%Y.%m.%d %H:%M:%S").tar --directory=etc/
+tar -zcpf /run/media/SecBackup/$(date "+%Y.%m.%d %H:%M:%S").tar --directory=etc/
