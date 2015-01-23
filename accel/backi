@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mount /dev/mapper/eplatte /run/media
+
+tar -zcpf /run/backup-etc-$(date "+%Y.%m.%d %H:%M:%S").tar --directory=etc/
