@@ -11,4 +11,4 @@ port = int(input("Port eingeben: "))
 s.connect((host, port))
 while True:
 	text = input("Geben Sie eine Nachrischt ein: ")
-	s.sendall(str.encode(text))
+	s.sendall(text.encode())
