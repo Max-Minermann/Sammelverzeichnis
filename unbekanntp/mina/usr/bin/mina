@@ -1,0 +1,18 @@
+#!/usr/bin/python3.4
+
+import socket
+import sys
+
+print("Programm startet.")
+serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print("socket erstellt")
+serversocket.bind(("", 1337))
+print("Gebunden auf port 1337")
+serversocket.listen(5)
+print("listet (5)")
+
+while True:
+	(conn, address) = serversocket.accept()
+	print(address)
+	data = conn.recv(2048)
+	print(data)
